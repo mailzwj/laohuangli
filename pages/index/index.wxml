@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="header">
+    {{date.calendar}}<text class="lunar">({{date.lunar}})</text>
+  </view>
+  <view class="weekday">
+    <view class="day">日</view>
+    <view class="day">一</view>
+    <view class="day">二</view>
+    <view class="day">三</view>
+    <view class="day">四</view>
+    <view class="day">五</view>
+    <view class="day">六</view>
+  </view>
+  <view class="table">
+
+    <view class="row" wx:for="{{dateTable}}" wx:for-item="row" style="height:{{itemHeight}};">
+      <block  wx:for="{{row}}" wx:for-item="day">
+        <block wx:if="{{day}}">
+          <view class="date today" wx:if="{{day.isToday}}" hover-class="date-hover" bindtap="toDetail" data-date="{{day.date}}">
+            <view class="date-box">
+              <text class="cal-date">{{day.calendar}}</text>
+              <view class="lun-date">{{day.lunar}}</view>
+            </view>
+          </view>
+          <view class="date" hover-class="date-hover" bindtap="toDetail" data-date="{{day.date}}" wx:else>
+            <view class="date-box">
+              <text class="cal-date">{{day.calendar}}</text>
+              <view class="lun-date">{{day.lunar}}</view>
+            </view>
+          </view>
+        </block>
+        <view class="date date-empty" wx:else></view>
+      </block>
+    </view>
+  </view>
+  <view class="footer">
+    <button class="c-month c-prev" hover-class="c-hover" bindtap="goPrevMonth" data-month="{{month}}">上一月</button>
+    <button class="c-month c-next" hover-class="c-hover" bindtap="goNextMonth" data-month="{{month}}">下一月</button>
+  </view>
+</view>

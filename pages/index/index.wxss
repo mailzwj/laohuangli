@@ -1,0 +1,121 @@
+/**index.wxss**/
+.header {
+  padding-left: 10px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+.header .lunar {
+  font-size: 14px;
+}
+
+.weekday {
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.weekday .day {
+  float: left;
+  width: 14.2857%;
+  line-height: 50px;
+  text-align: center;
+  background-color: #3b65a0;
+}
+
+.weekday .day:nth-child(even) {
+  background-color: #3b9aa0;
+}
+
+.table {
+  position: absolute;
+  top: 100px;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+}
+
+.table .row {
+  height: 20%;
+  border-bottom: 1px solid #dedede; /* 3b65a0 */
+  box-sizing: border-box;
+}
+
+.table .row:last-child {
+  border-bottom: 0;
+}
+
+.table .row .date {
+  float: left;
+  display: flex;
+  width: 14.2851%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.table .row .date.today {
+  background-color: #ffa;
+}
+
+.table .row .date-hover {
+  background-color: #e0e0e0;
+}
+
+.table .row .date.date-empty {
+  background-color: #efefef;
+}
+
+.table .row .date:nth-child(odd) {
+  border-left: 1px solid #dedede; /* 3b65a0 */
+  border-right: 1px solid #dedede;
+}
+
+.table .cal-date {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  color: #666;
+}
+
+.table .lun-date {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+}
+
+.footer .c-month {
+  float: left;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: #3b9aa0;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.footer .c-hover {
+  background-color: rgba(59, 154, 160, .9);
+}
+
+.footer .c-month.c-prev {
+  border-right: 1px solid #fff;
+}
+
+.footer .c-month.c-next {
+  border-left: 1px solid #fff;
+}
