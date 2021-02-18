@@ -142,7 +142,7 @@ var dateTool = {
     var notLeapMounth = true;
 
     // 效验闰月
-    for (i = 1; i < 13 && offset > 0; i++) {
+    for (var i = 1; i < 13 && offset > 0; i++) {
       // 闰月
       if (leap > 0 && i == (leap + 1) && isLeap == false) {
         --i;
