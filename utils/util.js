@@ -174,8 +174,9 @@ var dateTool = {
     }
     //农历月
     this.cMonth = notLeapMounth ? i : -i;
+    var dayLen = this.monthDays(this.cYear, i);
     //农历日
-    this.cDay = offset + 3;
+    this.cDay = offset + 3 > dayLen ? ((offset + 3) % dayLen) : offset + 3;
 
     return {
       year: this.cYear,
