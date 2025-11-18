@@ -1,0 +1,32 @@
+<!--pages/detail/detail.wxml-->
+<view class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <view class="err-msg" wx:if="{{errMsg}}">{{errMsg}}</view>
+    <view class="date-detail" wx:else>
+        <view class="header">{{yangli}} <text class="sub-title">({{yinli}})</text></view>
+        <view class="table">
+            <view class="row row-yi">
+                <view class="left">宜</view>
+                <view class="right">
+                    {{yi}}
+                </view>
+            </view>
+            <view class="row row-ji">
+                <view class="left">忌</view>
+                <view class="right">
+                    {{ji}}
+                </view>
+            </view>
+        </view>
+        <!--<view>{{wuxing}}</view>
+        <view>{{chongsha}}</view>
+        <view>{{baiji}}</view>
+        <view>{{jishen}}</view>
+        <view>{{yi}}</view>
+        <view>{{xiongshen}}</view>
+        <view>{{ji}}</view>-->
+    </view>
+    <view class="footer">
+        <button class="c-day c-prev" hover-class="c-hover" bindtap="goPrevDay" data-day="{{date}}">前一天</button>
+        <button class="c-day c-next" hover-class="c-hover" bindtap="goNextDay" data-day="{{date}}">后一天</button>
+    </view>
+</view>
